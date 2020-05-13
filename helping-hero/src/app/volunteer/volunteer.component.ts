@@ -8,10 +8,16 @@ import { Volunteer } from '../volunteer'
 })
 export class VolunteerComponent implements OnInit {
   volunteer: Volunteer = {
-    id: 1,
+    volunteerID: 1,
     firstName: 'Johnny',
-    lastName: 'Doe'
-
+    lastName: 'Doe',
+    email: 'jdoe@email.com',
+    city: 'Kansas City',
+    state: 'MO',
+    zipCode: '64130',
+    phoneNumber: '111-111-1111',
+    dateofBirth: '08/01/1995',
+    services: 'Cleaning, Cooking'
   };
 
   constructor() { }

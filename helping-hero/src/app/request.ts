@@ -1,6 +1,14 @@
 export interface Request {
-    id: number;
+    services: string;
+    time: string;
+    requestId: number;
     firstName: string;
     lastName: string;
-    body: string;
+    email: string;
+    city: string;
+    state: string;
+    zipCode: string;
+    phoneNumber: string;
+    dateofBirth: string;
+    volunteerID: number
 }

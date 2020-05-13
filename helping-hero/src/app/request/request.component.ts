@@ -8,10 +8,18 @@ import { Request } from '../request'
 })
 export class RequestComponent implements OnInit {
   request: Request = {
-    id: 1,
+    requestId: 1,
     firstName: 'Mike',
     lastName: 'Jones',
-    body: 'Cleaning'
+    email: 'whomjones@email.com',
+    city: 'Kansas City',
+    state: 'MO',
+    zipCode: '64130',
+    phoneNumber: '222-222-2222',
+    dateofBirth: '06/02/1950',
+    services: 'Cooking, Cleaning',
+    time: '4:00pm - 6:00pm',
+    volunteerID: 1
   }
 
   constructor() { }
