@@ -15,6 +15,7 @@ import { RequestComponent } from './request/request.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
