@@ -1,32 +1,32 @@
 <h2>VOLUNTEER</h2>
-<div><span>id: </span>{{volunteer.id}}</div>
+<div><span>id: </span>{{volunteer.volunteerID}}</div>
 <div><span>name: </span>{{volunteer.firstName}} {{volunteer.lastName}}</div>
 <div>
     <label>First Name:
-        <input [ngmodel]='volunteer.firstName' placeholder='first name'>
+        <input [(ngModel)]='volunteer.firstName' placeholder='first name'/>
     </label>
     <label>Last Name:
-        <input [ngmodel]='volunteer.lastName' placeholder='first name'>
+        <input [(ngModel)]='volunteer.lastName' placeholder='first name'/>
     </label>
     <label>Email:
-        <input [ngmodel]='volunteer.email' placeholder='email'>
+        <input [(ngModel)]='volunteer.email' placeholder='email'/>
     </label>
     <label>City:
-        <input [ngmodel]='volunteer.city' placeholder='city'>
+        <input [(ngModel)]='volunteer.city' placeholder='city'/>
     </label>
     <label>State:
-        <input [ngmodel]='volunteer.state' placeholder='state'>
+        <input [(ngModel)]='volunteer.state' placeholder='state'/>
     </label>
     <label>Zip Code:
-        <input [ngmodel]='volunteer.zipCode' placeholder='zip code'>
+        <input [(ngModel)]='volunteer.zipCode' placeholder='zip code'/>
     </label>
     <label>Phone Number:
-        <input [ngmodel]='volunteer.phoneNumber' placeholder='XXX-XXX-XXXX'>
+        <input [(ngModel)]='volunteer.phoneNumber' placeholder='XXX-XXX-XXXX'/>
     </label>
     <label>Date of Birth:
-        <input [ngmodel]='volunteer.dateofBirth' placeholder='MM/DD/YYYY'>
+        <input [(ngModel)]='volunteer.dateofBirth' placeholder='MM/DD/YYYY'>
     </label>
     <label>Services:
-        <input [ngmodel]='volunteer.services' placeholder='cleaning, cooking, shopping, walking'>
+        <input [(ngModel)]='volunteer.services' placeholder='cleaning, cooking, shopping, walking'>
     </label>
 </div>

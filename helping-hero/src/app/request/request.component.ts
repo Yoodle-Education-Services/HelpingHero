@@ -8,7 +8,7 @@ import { Request } from '../request'
 })
 export class RequestComponent implements OnInit {
   request: Request = {
-    requestId: 1,
+    requestID: 1,
     firstName: 'Mike',
     lastName: 'Jones',
     email: 'whomjones@email.com',

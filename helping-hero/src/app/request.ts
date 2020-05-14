@@ -1,7 +1,7 @@
 export interface Request {
+    requestID: number;
     services: string;
     time: string;
-    requestId: number;
     firstName: string;
     lastName: string;
     email: string;
