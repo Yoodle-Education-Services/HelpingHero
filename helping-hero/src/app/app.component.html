@@ -1,7 +1,6 @@
-<h1>{{title}}</h1>
+<img src='../assets/images/helpinghero_logo.png' width=200, height=200>
 <nav>
     <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-    <nav>
     <ul>
         <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
         <li><a routerLink="/volunteer" routerLinkActive="active">Be A Hero</a></li>
@@ -9,7 +8,6 @@
         <li><a routerLink="/about" routerLinkActive="active">About</a></li>
         <li><a routerLink="/admin" routerLinkActive="active">Admin</a></li>
     </ul>
-    </nav>
-    <!-- The routed views render in the <router-outlet>-->
-    <router-outlet></router-outlet>
 </nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
