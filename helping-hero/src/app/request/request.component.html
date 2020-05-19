@@ -1,33 +1,33 @@
-<h2>REQUEST</h2>
-<div><span>id: </span>{{request.requestID}}</div>
-<div><span>name: </span>{{request.firstName}} {{request.lastName}}</div>
 <div>
-    <label>Services:
-        <input [(ngModel)]='request.services' placeholder='cleaning, cooking, shopping, walking'/>
-    </label>
-    <label>Time:
-        <input [(ngModel)]='request.time' placeholder='time start - time end'/>
-    </label>
-    <label>First Name:
-        <input [(ngModel)]='request.firstName' placeholder='first name'/>
-    </label>
-    <label>Last Name:
-        <input [(ngModel)]='request.lastName' placeholder='first name'/>
-    </label>
-    <label>Email:
-        <input [(ngModel)]='request.email' placeholder='email'/>
-    </label>
-    <label>City:
-        <input [(ngModel)]='request.city' placeholder='city'/>
-    </label>
-    <label>State:
-        <input [(ngModel)]='request.state' placeholder='state'/>
-    </label>
-    <label>Zip Code:
-        <input [(ngModel)]='request.zipCode' placeholder='zip code'/>
-    </label>
-    <label>Phone Number:
-        <input [(ngModel)]='request.phoneNumber' placeholder='XXX-XXX-XXXX'/>
-    </label>
-    <label>Volunteer assigned:</label>
+    <h2>Request Help with Helping Hero</h2>
+    <form>
+        <label>Services:
+            <input [(ngModel)]='request.services' placeholder='cleaning, cooking, shopping, walking'/>
+        </label>
+        <label>Time:
+            <input [(ngModel)]='request.time' placeholder='time start - time end'/>
+        </label>
+        <label>First Name:
+            <input [(ngModel)]='request.firstName' placeholder='first name'/>
+        </label>
+        <label>Last Name:
+            <input [(ngModel)]='request.lastName' placeholder='first name'/>
+        </label>
+        <label>Email:
+            <input [(ngModel)]='request.email' placeholder='email'/>
+        </label>
+        <label>City:
+            <input [(ngModel)]='request.city' placeholder='city'/>
+        </label>
+        <label>State:
+            <input [(ngModel)]='request.state' placeholder='state'/>
+        </label>
+        <label>Zip Code:
+            <input [(ngModel)]='request.zipCode' placeholder='zip code'/>
+        </label>
+        <label>Phone Number:
+            <input [(ngModel)]='request.phoneNumber' placeholder='XXX-XXX-XXXX'/>
+        </label>
+        <label>Volunteer assigned:</label>
+    </form>
 </div>

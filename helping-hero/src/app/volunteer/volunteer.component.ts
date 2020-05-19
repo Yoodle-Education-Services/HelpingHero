@@ -6,23 +6,25 @@ import { Volunteer } from '../volunteer'
   templateUrl: './volunteer.component.html',
   styleUrls: ['./volunteer.component.css']
 })
-export class VolunteerComponent implements OnInit {
-  volunteer: Volunteer = {
-    volunteerID: 1,
-    firstName: 'Johnny',
-    lastName: 'Doe',
-    email: 'jdoe@email.com',
-    city: 'Kansas City',
-    state: 'MO',
-    zipCode: '64130',
-    phoneNumber: '111-111-1111',
-    dateofBirth: '08/01/1995',
-    services: 'Cleaning, Cooking'
-  };
+export class VolunteerComponent {
+  services = ['Cleaning', 'Cooking', 'Shopping', 'Walking'];
+  
+  volunteer = new Volunteer(
+    1,
+    'Johnny',
+    'Doe',
+    'jdoe@email.com',
+    'Kansas City',
+    'MO',
+    '64130',
+    '111-111-1111',
+    '08/01/1995',
+    this.services[0]
+  );
+
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
