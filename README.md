@@ -1,4 +1,4 @@
-![Helping Hero](images/helpinghero_logo.png)
+![Helping Hero](assets/images/helpinghero_logo.png)
 # Helping Hero
 ## An application made by people who care, for people who care.
 ### Two parts of Helping Hero:
