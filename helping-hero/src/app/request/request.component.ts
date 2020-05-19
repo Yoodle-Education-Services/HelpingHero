@@ -6,25 +6,28 @@ import { Request } from '../request'
   templateUrl: './request.component.html',
   styleUrls: ['./request.component.css']
 })
-export class RequestComponent implements OnInit {
-  request: Request = {
-    requestID: 1,
-    firstName: 'Mike',
-    lastName: 'Jones',
-    email: 'whomjones@email.com',
-    city: 'Kansas City',
-    state: 'MO',
-    zipCode: '64130',
-    phoneNumber: '222-222-2222',
-    dateofBirth: '06/02/1950',
-    services: 'Cooking, Cleaning',
-    time: '4:00pm - 6:00pm',
-    volunteerID: 1
-  }
+export class RequestComponent {
+  services = ['Cleaning', 'Cooking', 'Shopping', 'Walking'];
+
+  request = new Request(
+    1,
+    this.services[0],
+    "4:00pm - 6:00pm",
+    'Mike',
+    'Jones',
+    'whomjones@email.com',
+    'Kansas City',
+    'MO',
+    '64130',
+    '222-222-2222',
+    '06/02/1950',
+    1
+  );
+
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
