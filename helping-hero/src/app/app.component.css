@@ -1,17 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
-div {
-  float: left;
+h1 {
+  font-family: 'Bangers', cursive;
 }
 
 ul {
+  display: flex;
   list-style-type: none;
   overflow: hidden;
-  background-color: #333;
   width: 100%;
 }
 
 li {
-  float: left;
+  background-color: #333;
   width: 25%;
 }
 
@@ -29,4 +30,32 @@ li a:hover:not(.active) {
 
 li .active {
   background-color: #4CAF50;
+}
+
+#headline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#motto {
+  display: column;
+}
+
+@media all and (max-width: 475px) {
+  #headline {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 625px) {  
+    
+  ul {  
+    flex-wrap: wrap;  
+  }  
+    
+  ul > li {  
+    flex-basis: 100%;  
+  }
+
 }
