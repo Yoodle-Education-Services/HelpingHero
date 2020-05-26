@@ -1,0 +1,46 @@
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#helping {
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#container {
+    padding: 1em;
+    background-color: #ffffff;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+#signup {
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 570px) {
+    #signup {
+        flex-direction: column;
+    }
+    
+  }
+
+@media screen and (max-width: 1200px) {
+    body {
+      flex-direction: column;
+    }
+    #signup span {
+        padding: 1em;
+    }
+    
+  }
