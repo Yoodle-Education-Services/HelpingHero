@@ -1,13 +1,17 @@
 body {
     max-width: 100%;
-    margin: 0 auto;
+
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+span {
+    padding: 1em;
 }
 
 #helping {
     height: auto;
-    margin: 0 auto;
     max-width: 100%;
 }
 
@@ -38,9 +42,6 @@ body {
 @media screen and (max-width: 1200px) {
     body {
       flex-direction: column;
-    }
-    #signup span {
-        padding: 1em;
     }
     
   }
