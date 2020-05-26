@@ -1,9 +1,11 @@
+import { Time } from '@angular/common';
+
 export class Request {
 
     constructor(
         public requestID: number,
         public service: string,
-        public time: string,
+        public time: Time,
         public firstName: string,
         public lastName: string,
         public email: string,
