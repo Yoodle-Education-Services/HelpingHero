@@ -9,7 +9,7 @@ export class Volunteer {
         public state: string,
         public zip: string,
         public phoneNumber: string,
-        public birthdate: string,
+        public birthdate: Date,
         public service: string
     ) {  }
   
