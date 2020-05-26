@@ -1,1 +1,15 @@
-<p>admin works!</p>
+<h2>Heroes&#44; Assemble&#33;</h2>
+<h3>Please view the following list of unclaimed helping requests</h3>
+<h3>If you find one that you could do, please click the claim button</h3>
+<div id="request">
+    <form (ngSubmit)="onSubmit()" #claimForm="ngForm">
+        <div class="form-group">
+            <p>Name - Service</p>
+            <p>Date - Time</p>
+            <p>Email</p>
+            <p>Phone Number (if provided)</p>
+            <button type='submit' class="btn btn-secondary">Claim</button>
+            <p [hidden]="!submitted">Claimed by volunteer</p>
+        </div>
+    </form>
+</div>
