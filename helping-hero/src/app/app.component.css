@@ -1,28 +1,32 @@
+
+div {
+  float: left;
+}
+
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   background-color: #333;
-  
-  top: 0;
   width: 100%;
 }
 
+li {
+  float: left;
+  width: 25%;
+}
+
 li a {
-    float: left;
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    width: 20%; /* Four links of equal widths */
-    text-align: center;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
 }
 
 li a:hover:not(.active) {
   background-color: #111;
 }
 
-.active {
+li .active {
   background-color: #4CAF50;
 }
