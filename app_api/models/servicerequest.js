@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const serviceRequest = new mongoose.Schema({
-    Category: {
+    category: {
         type: String,
         required: true
     },
@@ -10,8 +10,8 @@ const serviceRequest = new mongoose.Schema({
         'default': Date.now
       },
       timeNeeded: {
-          type: Number,
-          required: true
+          type: String
+
       },
       firstName: {
         type: String,
@@ -41,7 +41,7 @@ const serviceRequest = new mongoose.Schema({
         type: String,
         required: true
     },
-    VolunteerID: {
+    volunteerId: {
         type: String
     }
     
