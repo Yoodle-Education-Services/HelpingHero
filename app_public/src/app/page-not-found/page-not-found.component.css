@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+
+.callout {
+    max-width: 500px;
+    min-width: 250px;
+    padding: 0.5em;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.callout p {
+    font-weight: bold;
+}

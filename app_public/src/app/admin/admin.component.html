@@ -1,15 +1,15 @@
 <h2>Heroes&#44; Assemble&#33;</h2>
 <h3>Please view the following list of unclaimed helping requests</h3>
 <h3>If you find one that you could do, please click the claim button</h3>
-<div id="request">
     <form (ngSubmit)="onSubmit()" #claimForm="ngForm">
-        <div class="form-group">
-            <p>Name - Service</p>
-            <p>Date - Time</p>
-            <p>Email</p>
-            <p>Phone Number (if provided)</p>
-            <button type='submit' class="btn btn-secondary">Claim</button>
+        <div id="request" class="form-group" *ngFor="let request of requests">
+            <p>{{request.firstName}} {{request.lastName}}</p>
+            <p>Request of {{request.service}} on {{request.dateNeeded}}</p>
+            <p>Contact Information:</p>
+            <p>{{request.Email}}</p>
+            <p>{{request.phoneNumber}}</p>
+            <p>{{request._id}}</p>
+            <button type='submit' class="btn btn-secondary" (click)="editRequests(request._id)">Claim</button>
             <p [hidden]="!submitted">Claimed by volunteer</p>
         </div>
     </form>
-</div>

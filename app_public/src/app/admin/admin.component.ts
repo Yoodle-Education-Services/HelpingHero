@@ -23,12 +23,27 @@ export class AdminComponent implements OnInit {
   constructor(private hhDataService: HHDataService) { }
 
   requests: Request[];
+  request: Request;
 
   private getRequests(): void {
     this.hhDataService
       .getServiceRequest()
         .then(foundRequests => {
           this.requests = foundRequests;
+          console.log('requests', this.requests);
+        });
+  }
+  private editRequests(srvreqid: String): void {
+    console.log("servicerequestid", srvreqid);
+    this.hhDataService.getServiceRequestbyId(srvreqid).then(newRequest => {
+      this.request = newRequest;
+      console.log('requests', this.request);
+    });
+    this.hhDataService
+      .updateServiceRequest(srvreqid, this.request)
+        .then(foundRequest => {
+          this.request = foundRequest;
+          console.log('request', this.request);
         });
   }
 

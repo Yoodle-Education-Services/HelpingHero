@@ -9,9 +9,10 @@ import { AdminComponent } from '../admin/admin.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component'
 
 const routes: Routes = [
+  { path: 'request', component: RequestComponent},
   { path: 'admin', component: AdminComponent},
   { path: 'volunteer', component: VolunteerComponent },
-  { path: 'request', component: RequestComponent},
+  
   { path: 'about', component: AboutComponent},
   { path: 'home', component: HomeComponent},
 

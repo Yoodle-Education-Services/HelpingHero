@@ -12,7 +12,7 @@ const volunteerCreate = function (req, res) {
     zipcode: req.body.zipcode,
     phoneNumber: req.body.phoneNumber,
     dateofBirth: req.body.dateofBirth,
-    category: [req.body.category]
+    service: [req.body.service]
   
     
   }, (err, volunteer) => {
