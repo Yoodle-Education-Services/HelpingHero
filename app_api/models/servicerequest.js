@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const serviceRequest = new mongoose.Schema({
-    category: {
+    service: {
         type: String,
         required: true
     },

@@ -12,10 +12,6 @@
                           #service="ngModel">
                   <option *ngFor="let service of services" [value]="service">{{service}}</option>
                   </select>
-                  <div [hidden]="service.valid || service.pristine" 
-                      class="alert alert-danger">
-                      Service is required
-                  </div>
               </div>
 
               <div class="form-group">
@@ -24,10 +20,6 @@
                           required
                           [(ngModel)]="newRequest.time" name="time"
                           #time="ngModel">
-                  <div [hidden]="time.valid || time.pristine" 
-                      class="alert alert-danger">
-                      Time is required
-                  </div>
               </div>
 
               <div class="form-group">
@@ -36,10 +28,6 @@
                           required
                           [(ngModel)]="newRequest.firstName" name="firstName"
                           #firstName="ngModel">
-                  <div [hidden]="firstName.valid || firstName.pristine" 
-                      class="alert alert-danger">
-                      First Name is required
-                  </div>
               </div>
 
               <div class="form-group">
@@ -48,22 +36,14 @@
                           required
                           [(ngModel)]="newRequest.lastName" name="lastName"
                           #lastName="ngModel">
-                  <div [hidden]="lastName.valid || lastName.pristine" 
-                      class="alert alert-danger">
-                      Last Name is required
-                  </div>
               </div>
 
               <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email"
+                  <label for="Email">Email</label>
+                  <input type="Email" class="form-control" id="Email"
                           required
-                          [(ngModel)]="newRequest.email" name="email"
-                          #email="ngModel">
-                  <div [hidden]="email.valid || email.pristine" 
-                      class="alert alert-danger">
-                      Email is required
-                  </div>
+                          [(ngModel)]="newRequest.Email" name="Email"
+                          #Email="ngModel">
               </div>
 
               <div class="form-group">
@@ -72,10 +52,6 @@
                           required
                           [(ngModel)]="newRequest.city" name="city"
                           #city="ngModel">
-                  <div [hidden]="city.valid || city.pristine" 
-                      class="alert alert-danger">
-                      City is required
-                  </div>
               </div>
 
               <div class="form-group">
@@ -84,41 +60,33 @@
                           required
                           [(ngModel)]="newRequest.state" name="state"
                           #state="ngModel">
-                      <div [hidden]="state.valid || state.pristine" 
-                          class="alert alert-danger">
-                          State is required
-                      </div>
               </div>
 
               <div class="form-group">
-                  <label for="zip">Zip</label>
-                  <input type="text" class="form-control" id="zip"
+                  <label for="zipcode">Zipcode</label>
+                  <input type="text" class="form-control" id="zipcode"
                           required
-                          [(ngModel)]="newRequest.zip" name="zip"
-                          #zip="ngModel">
-                  <div [hidden]="zip.valid || zip.pristine" 
-                      class="alert alert-danger">
-                      Zip is required
-                  </div>
+                          [(ngModel)]="newRequest.zipcode" name="zipcode"
+                          #zipcode="ngModel">
               </div>
 
               <div class="form-group">
-                  <label for="phoneNumber">Phone Number &#40;optional&#41;</label>
+                  <label for="phoneNumber">Phone Number</label>
                   <input type="tel" class="form-control" id="phoneNumber"
                           [(ngModel)]="newRequest.phoneNumber" name="phoneNumber">
               </div>
 
               <div class="form-group">
-                  <label for="birthdate">Date of Birth &#40;optional&#41;</label>
+                  <label for="birthdate">Date of Birth </label>
                   <input type="date" class="form-control" id="birthdate"
-                          [(ngModel)]="newRequest.phoneNumber" name="birthdate">
+                          [(ngModel)]="newRequest.birthdate" name="birthdate">
               </div>
               <button type="submit" class="btn btn-success" [disabled]="!requestForm.form.valid">Submit</button>
           </form>
       </div>
   </div>
 
-  <div [hidden]="!submitted">
-      <h3>Thank you&#44; {{newRequest.firstName}} {{newRequest.time}}&#33;</h3>
+  <div>
+      <h3>Thank you&#44; {{newRequest.firstName}} we will connect you with a Hero for {{newRequest.time}}&#33;</h3>
   </div>
 </body>

@@ -4,12 +4,12 @@ export class Volunteer {
         public volunteerID: number,
         public firstName: string,
         public lastName: string,
-        public email: string,
+        public Email: string,
         public city: string,
         public state: string,
-        public zip: string,
+        public zipcode: string,
         public phoneNumber: string,
-        public birthdate: Date,
+        public birthdate: string,
         public service: string
     ) {  }
   

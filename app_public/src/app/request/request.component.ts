@@ -17,25 +17,27 @@ export class RequestComponent {
     time: null,
     firstName: '',
     lastName: '',
-    email: '',
+    Email: '',
     city: '',
     state: '',
-    zip: '',
+    zipcode: '',
     phoneNumber: '',
     birthdate: '',
     volunteerID: 0
    
   };
 
-  //submitted = false;
+  submitted = false;
 
-  //onSubmit() { this.submitted = true; }
+  onSubmit() { this.submitted = true; }
   public formVisible: boolean = false;
   public formError: string;
 
   private formIsValid(): boolean {
-    if (this.newRequest.service && this.newRequest.firstName
-      && this.newRequest.lastName) {
+    if (this.newRequest.service && this.newRequest.time
+      && this.newRequest.lastName && this.newRequest.firstName && this.newRequest.Email &&
+      this.newRequest.city && this.newRequest.state && this.newRequest.zipcode && this.newRequest.phoneNumber
+      && this.newRequest.birthdate) {
       return true;
     } else {
       return false;
@@ -45,8 +47,15 @@ export class RequestComponent {
   private resetAndHideRequestForm(): void {
     this.formVisible = false;
     this.newRequest.service = '';
-    this.newRequest.firstName = '';
+    this.newRequest.time = null;
     this.newRequest.lastName = '';
+    this.newRequest.Email = '';
+    this.newRequest.firstName = '';
+    this.newRequest.city = '';
+    this.newRequest.state = '';
+    this.newRequest.zipcode = '';
+    this.newRequest.phoneNumber = '';
+    this.newRequest.birthdate = '';
   }
 
   public onRequestSubmit(): void {

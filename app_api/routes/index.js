@@ -15,6 +15,7 @@ router
 
 router
   .route('/servicerequest/:srvReqid')
+  .get(ctrlRequest.requestsReadOne)
   .put(ctrlRequest.srvReqUpdateOne);
 
 module.exports = router;

@@ -10,7 +10,7 @@ const servReqCreate = function (req, res) {
     state: req.body.state,
     zipcode: req.body.zipcode,
     phoneNumber: req.body.phoneNumber,
-    category: req.body.category,
+    service: req.body.service,
     dateNeeded: req.body.dateNeeded,
     timeNeeded: req.body.timeNeeded,
     volunteerId: req.body.volunteerId
@@ -39,6 +39,39 @@ const requestRead = function (req, res) {
   });
 
 };
+const requestsReadOne = function (req, res) {
+  console.log("enter");
+  if (req.params && req.params.srvReqid) {
+    console.log("servicerequestid api", req.params.srvReqid);
+    srvreq
+      .findById(req.params.srvReqid)
+      .exec((err, request) => {
+        if (!request) {
+          res	
+            .status(404) 
+            .json({	
+              "message": "requestId not found"
+            });	 
+          return;
+        } else if (err) {
+          res	
+            .status(404) 
+            .json(err); 
+          return; 	
+        }
+        res		
+          .status(200)
+          .json(request);
+      });
+  } else {		
+    res		
+      .status(404) 	
+      .json({	
+        "message": "No requestId in request"
+      });		
+  }
+};
+
 
 
 const srvReqUpdateOne = function (req, res) {
@@ -74,10 +107,10 @@ const srvReqUpdateOne = function (req, res) {
       serviceReq.state=req.body.state,
       serviceReq.zipcode=req.body.zipcode,
       serviceReq.phoneNumber=req.body.phoneNumber,
-      serviceReq.category=req.body.category,
+      serviceReq.service=req.body.service,
       serviceReq.dateNeeded=req.body.dateNeeded,
       serviceReq.timeNeeded=req.body.timeNeeded,
-      serviceReq.volunteerId=req.body.volunteerId 
+      serviceReq.volunteerId='5ecfe44f145a552e985e3f37' 
       serviceReq.save((err, serviceReq) => {
         if (err) {
           res
@@ -97,5 +130,6 @@ const srvReqUpdateOne = function (req, res) {
 module.exports = {
   requestRead,
   srvReqUpdateOne,
-  servReqCreate
+  servReqCreate,
+  requestsReadOne
 }

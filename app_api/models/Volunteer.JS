@@ -33,7 +33,10 @@ const Volunteer = new mongoose.Schema({
     type: Date,
     'default': Date.now
   },
- category:[String]
+ service: {
+type: String,
+required: true,
+ }
   
 });
 

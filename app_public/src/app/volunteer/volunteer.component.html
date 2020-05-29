@@ -3,103 +3,75 @@
       <div [hidden]='submitted'>
           <h2>Be A Hero Today!</h2>
           <h3>Volunteer with Helping Hero</h3>
-          <form (ngSubmit)="onSubmit()" #volunteerForm="ngForm">
+          <form (ngSubmit)="onVolunteerSubmit()" #volunteerForm="ngForm">
               <div class="form-group">
                   <label for="firstName">First Name</label>
                   <input type="text" class="form-control" id="firstName"
                           required
-                          [(ngModel)]="volunteer.firstName" name="firstName"
+                          [(ngModel)]="newVolunteer.firstName" name="firstName"
                           #firstName="ngModel">
-                  <div [hidden]="firstName.valid || firstName.pristine" 
-                      class="alert alert-danger">
-                      First Name is required
-                  </div>
               </div>
 
               <div class="form-group">
                   <label for="lastName">Last Name</label>
                   <input type="text" class="form-control" id="lastName"
                           required
-                          [(ngModel)]="volunteer.lastName" name="lastName"
+                          [(ngModel)]="newVolunteer.lastName" name="lastName"
                           #lastName="ngModel">
-                  <div [hidden]="lastName.valid || lastName.pristine" 
-                      class="alert alert-danger">
-                      Last Name is required
-                  </div>
               </div>
 
               <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email"
+                  <label for="Email">Email</label>
+                  <input type="Email" class="form-control" id="Email"
                           required
-                          [(ngModel)]="volunteer.email" name="email"
+                          [(ngModel)]="newVolunteer.Email" name="Email"
                           #email="ngModel">
-                  <div [hidden]="email.valid || email.pristine" 
-                      class="alert alert-danger">
-                      Email is required
-                  </div>
               </div>
 
               <div class="form-group">
                   <label for="city">City</label>
                   <input type="text" class="form-control" id="city"
                           required
-                          [(ngModel)]="volunteer.city" name="city"
+                          [(ngModel)]="newVolunteer.city" name="city"
                           #city="ngModel">
-                  <div [hidden]="city.valid || city.pristine" 
-                      class="alert alert-danger">
-                      City is required
-                  </div>
               </div>
 
               <div class="form-group">
                   <label for="state">State</label>
                   <input type="text" class="form-control" id="state"
                           required
-                          [(ngModel)]="volunteer.state" name="state"
+                          [(ngModel)]="newVolunteer.state" name="state"
                           #state="ngModel">
-                      <div [hidden]="state.valid || state.pristine" 
-                          class="alert alert-danger">
-                          State is required
-                      </div>
               </div>
 
               <div class="form-group">
-                  <label for="zip">Zip</label>
-                  <input type="text" class="form-control" id="zip"
+                  <label for="zipcode">Zip</label>
+                  <input type="text" class="form-control" id="zipcode"
                           required
-                          [(ngModel)]="volunteer.zip" name="zip"
+                          [(ngModel)]="newVolunteer.zipcode" name="zipcode"
                           #zip="ngModel">
-                  <div [hidden]="zip.valid || zip.pristine" 
-                      class="alert alert-danger">
-                      Zip is required
-                  </div>
               </div>
               
               <div class="form-group">
                   <label for="service">Service(s) Providing</label>
                   <select class="form-control" id="services"
                           required
-                          [(ngModel)]="volunteer.service" name="service"
+                          [(ngModel)]="newVolunteer.service" name="service"
                           #service="ngModel">
                   <option *ngFor="let service of services" [value]="service">{{service}}</option>
                   </select>
-                  <div [hidden]="service.valid || service.pristine" 
-                      class="alert alert-danger">
-                      Service is required
-                  </div>
               </div>
 
               <div class="form-group">
-                  <label for="phoneNumber">Phone Number &#40;optional&#41;</label>
+                  <label for="phoneNumber">Phone Number </label>
                   <input type="tel" class="form-control" id="phoneNumber"
-                          [(ngModel)]="volunteer.phoneNumber" name="phoneNumber">
+                          [(ngModel)]="newVolunteer.phoneNumber" name="phoneNumber">
               </div>
 
               <div class="form-group">
-                  <label for="birthdate">Date of Birth &#40;optional&#41;</label>
+                  <label for="birthdate">Date of Birth </label>
                   <input type="date" class="form-control" id="birthdate"
-                          [(ngModel)]="volunteer.birthdate" name="birthdate">
+                          [(ngModel)]="newVolunteer.birthdate" name="birthdate">
               </div>
 
               <button type="submit" class="btn btn-success" [disabled]="!volunteerForm.form.valid">Submit</button>
@@ -108,8 +80,8 @@
       
   </div>
 
-  <div [hidden]="!submitted">
-      <h2>Thank You&#44; {{volunteer.firstName}}&#33;</h2>
+  <div>
+      <h2>Thank You&#44; {{newVolunteer.firstName}}&#33;</h2>
       <h3>Please go to the <a routerLink="/admin" routerLinkActive="active">Helping Hero Request Page</a> to help someone near you&#33;</h3>
   </div>
 </body>
