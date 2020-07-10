@@ -1,0 +1,87 @@
+<body>
+  <div class='container'>
+      <div [hidden]='submitted'>
+          <h2>Be A Hero Today!</h2>
+          <h3>Volunteer with Helping Hero</h3>
+          <form (ngSubmit)="onVolunteerSubmit()" #volunteerForm="ngForm">
+              <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" class="form-control" id="firstName"
+                          required
+                          [(ngModel)]="newVolunteer.firstName" name="firstName"
+                          #firstName="ngModel">
+              </div>
+
+              <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lastName"
+                          required
+                          [(ngModel)]="newVolunteer.lastName" name="lastName"
+                          #lastName="ngModel">
+              </div>
+
+              <div class="form-group">
+                  <label for="Email">Email</label>
+                  <input type="Email" class="form-control" id="Email"
+                          required
+                          [(ngModel)]="newVolunteer.Email" name="Email"
+                          #email="ngModel">
+              </div>
+
+              <div class="form-group">
+                  <label for="city">City</label>
+                  <input type="text" class="form-control" id="city"
+                          required
+                          [(ngModel)]="newVolunteer.city" name="city"
+                          #city="ngModel">
+              </div>
+
+              <div class="form-group">
+                  <label for="state">State</label>
+                  <input type="text" class="form-control" id="state"
+                          required
+                          [(ngModel)]="newVolunteer.state" name="state"
+                          #state="ngModel">
+              </div>
+
+              <div class="form-group">
+                  <label for="zipcode">Zip</label>
+                  <input type="text" class="form-control" id="zipcode"
+                          required
+                          [(ngModel)]="newVolunteer.zipcode" name="zipcode"
+                          #zip="ngModel">
+              </div>
+              
+              <div class="form-group">
+                  <label for="service">Service(s) Providing</label>
+                  <select class="form-control" id="services"
+                          required
+                          [(ngModel)]="newVolunteer.service" name="service"
+                          #service="ngModel">
+                  <option *ngFor="let service of services" [value]="service">{{service}}</option>
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <label for="phoneNumber">Phone Number </label>
+                  <input type="tel" class="form-control" id="phoneNumber"
+                          [(ngModel)]="newVolunteer.phoneNumber" name="phoneNumber">
+              </div>
+
+              <div class="form-group">
+                  <label for="birthdate">Date of Birth </label>
+                  <input type="date" class="form-control" id="birthdate"
+                          [(ngModel)]="newVolunteer.birthdate" name="birthdate">
+              </div>
+
+              <button type="submit" class="btn btn-success" [disabled]="!volunteerForm.form.valid">Submit</button>
+          </form>
+      </div>
+      
+  </div>
+
+  <div>
+      <h2>Thank You&#44; {{newVolunteer.firstName}}&#33;</h2>
+      <h3>Please go to the <a routerLink="/admin" routerLinkActive="active">Helping Hero Request Page</a> to help someone near you&#33;</h3>
+  </div>
+</body>
